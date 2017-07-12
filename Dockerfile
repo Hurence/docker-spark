@@ -16,5 +16,4 @@ RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-${spark_version}-bin-hado
 RUN cd /opt && ln -s spark-${spark_version}-bin-hadoop2.7 spark
 ENV SPARK_HOME /opt/spark
 ENV PATH $PATH:$SPARK_HOME/bin
-EXPOSE 4040 8080 7077
 WORKDIR $SPARK_HOME/
