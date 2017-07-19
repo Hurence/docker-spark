@@ -17,3 +17,6 @@ RUN cd /opt && ln -s spark-${spark_version}-bin-hadoop2.7 spark
 ENV SPARK_HOME /opt/spark
 ENV PATH $PATH:$SPARK_HOME/bin
 WORKDIR $SPARK_HOME/
+
+RUN mkdir /opt/jmx; cd /opt/jmx; wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.9/jmx_prometheus_javaagent-0.9.jar
+ADD jmx-prometheus.yml /opt/jmx/jmx-prometheus.yml
