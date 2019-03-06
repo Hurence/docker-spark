@@ -1,6 +1,6 @@
 FROM anapsix/alpine-java
 
-ARG spark_version=2.3.2
+ARG spark_version=2.4.0
 ARG scala_version=2.11
 
 MAINTAINER hurence
@@ -12,7 +12,7 @@ VOLUME ["/spark"]
 
 
 # Spark
-RUN curl -s http://apache.crihan.fr/dist/spark/spark-${spark_version}/spark-${spark_version}-bin-hadoop2.7.tgz | tar -xz -C /opt/
+RUN curl -s ftp://ftp.crihan.fr/mirrors/www.apache.org/dist/spark/spark-${spark_version}/spark-${spark_version}-bin-hadoop2.7.tgz | tar -xz -C /opt/
 RUN cd /opt && ln -s spark-${spark_version}-bin-hadoop2.7 spark
 ENV SPARK_HOME /opt/spark
 ENV PATH $PATH:$SPARK_HOME/bin
