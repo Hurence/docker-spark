@@ -7,9 +7,7 @@ MAINTAINER hurence
 
 RUN apk add --update unzip wget curl docker jq coreutils procps vim
 
-
 VOLUME ["/spark"]
-
 
 # Spark
 RUN curl -s ftp://ftp.crihan.fr/mirrors/www.apache.org/dist/spark/spark-${spark_version}/spark-${spark_version}-bin-hadoop2.7.tgz | tar -xz -C /opt/
