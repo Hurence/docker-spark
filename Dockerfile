@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java
+FROM anapsix/alpine-java:8_jdk_nashorn
 
 ARG spark_version=2.4.0
 ARG scala_version=2.11
